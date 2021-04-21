@@ -28,6 +28,7 @@ class UserRepository {
     records.push(attrs);
     // write to file
     await this.writeAll(records);
+    return attrs;
   }
 
   async writeAll(records) {
