@@ -55,7 +55,7 @@ app.post('/signup', async (req, res) => {
     return res.send('Passwords must match');
 
   const user = await usersRepo.create({ email, password });
-  // added by cookie-session
+  // .session added by cookie-session
   req.session.userId = user.id;
 
   res.send('Account created');
@@ -83,7 +83,14 @@ app.post('/signin', async (req, res) => {
   const user = await usersRepo.getOneBy({ email });
   if (!user) return res.send('User not found');
 
-  if (user.password !== password) return res.send('Invalid email/password');
+  const validPassword = await usersRepo.comparePasswords(
+    user.password,
+    password,
+  );
+
+  if (!validPassword) {
+    return res.send('Invalid email/password');
+  }
 
   req.session.userId = user.id;
 
