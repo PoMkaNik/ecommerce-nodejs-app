@@ -1,4 +1,5 @@
 const express = require('express');
+const usersRepo = require('./repositories/users');
 
 const app = express();
 // app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,7 +38,8 @@ app.get('/', (req, res) => {
 // };
 
 app.post('/', (req, res) => {
-  console.log(req.body);
+  const { email, password, passwordConfirmation } = req.body;
+
   res.send('Account created');
 });
 
