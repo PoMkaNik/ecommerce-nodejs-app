@@ -3,6 +3,7 @@ const cookieSession = require('cookie-session');
 const authRouter = require('./routes/admin/auth');
 const adminProductsRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
+const cartsRouter = require('./routes/carts');
 
 const app = express();
 
@@ -15,9 +16,11 @@ app.use(
     keys: ['sihfjkssdapoqjwke34sfdq23@rsdfh'],
   }),
 );
+// routers
 app.use(authRouter);
 app.use(adminProductsRouter);
 app.use(productsRouter);
+app.use(cartsRouter);
 
 app.listen(3000, () => {
   console.log('server started at 3000');
