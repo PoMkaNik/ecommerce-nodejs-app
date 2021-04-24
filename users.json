@@ -13,5 +13,15 @@
     "email": "test2@test.com",
     "password": "3f9b4583b16838777d4f7527c4c6f8793b814b20e0ae49d8f994020abdcbd2d047b860d2e0ba7a97a9880083f4c1ab8f1be567cc22dc20eeba77d6e31a25e081.a69bb19cb3e14984",
     "id": "f4edd2b2"
+  },
+  {
+    "email": "booroman@gmail.com",
+    "password": "b755b3c69ec283ecd6844c91dbcab885e8029dcfc7db8e0f0107cfc754ce2d5763532818c6a0a7b2464249bc352275349a5f50af26e5918044bb283252905b6c.0730feda0fd59dd3",
+    "id": "c375334f"
+  },
+  {
+    "email": "test5@test.com",
+    "password": "cd851253a77a0792a0482b76de268f023bdee76682fbecfa6436ddbb51c2a0b303994f73b937218bcbfd66e9c14433f75c7babb5a4ea280c4051cff92eaca475.e332b32534df9861",
+    "id": "02a37726"
   }
 ]
