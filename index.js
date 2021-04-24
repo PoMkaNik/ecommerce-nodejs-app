@@ -6,8 +6,8 @@ const productsRouter = require('./routes/admin/products');
 const app = express();
 
 app.use(express.static('public'));
-// app.use(bodyParser.urlencoded({ extended: true }));
 // all middleware before routes
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cookieSession({
