@@ -1,5 +1,6 @@
 const express = require('express');
 const cookieSession = require('cookie-session');
+// routers
 const authRouter = require('./routes/admin/auth');
 const adminProductsRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
@@ -7,21 +8,22 @@ const cartsRouter = require('./routes/carts');
 
 const app = express();
 
+// define public folder for static files
 app.use(express.static('public'));
 // all middleware before routes
-// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true })); ->
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cookieSession({
     keys: ['sihfjkssdapoqjwke34sfdq23@rsdfh'],
   }),
 );
-// routers
+// use routers
 app.use(authRouter);
 app.use(adminProductsRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
-
+// start the server
 app.listen(3000, () => {
   console.log('server started at 3000');
 });
