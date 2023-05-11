@@ -24,6 +24,6 @@ app.use(adminProductsRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
 // start the server
-app.listen(3000, () => {
-  console.log('server started at 3000');
+app.listen(3030, () => {
+  console.log('server started at 3030');
 });

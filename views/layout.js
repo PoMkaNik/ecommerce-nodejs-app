@@ -10,6 +10,10 @@ module.exports = ({ content }) => {
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
         <link href="/css/main.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
       </head>
 
       <body>
@@ -51,6 +55,9 @@ module.exports = ({ content }) => {
                   </div>
                   <div class="navbar-item">
                     <a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a>
+                  </div>
+                  <div class="navbar-item">
+                    <a href="/signin"><i class="fa fa-user"></i> Login</a>
                   </div>
                 </div>
               </div>
