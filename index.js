@@ -26,9 +26,9 @@ app.use(adminProductsRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
 // start the server
-// app.listen(PORT, () => {
-//   console.log('server started at 3030');
-// });
+app.listen(PORT, () => {
+  console.log('server started at 3030');
+});
 
 // Export the Express API
 module.exports = app
