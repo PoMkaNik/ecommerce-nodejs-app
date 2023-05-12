@@ -8,6 +8,8 @@ const cartsRouter = require('./routes/carts');
 
 const app = express();
 
+const PORT = process.env.PORT || 3030
+
 // define public folder for static files
 app.use(express.static('public'));
 // all middleware before routes
@@ -24,6 +26,6 @@ app.use(adminProductsRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
 // start the server
-app.listen(3030, () => {
+app.listen(PORT, () => {
   console.log('server started at 3030');
 });
